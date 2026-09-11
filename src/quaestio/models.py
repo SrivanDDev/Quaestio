@@ -15,3 +15,13 @@ class LogEntry(BaseModel):
     level : LogLevel
     source : str
     message : str
+
+class AnalysisResult(BaseModel):
+    total_entries: int
+    debug_count: int
+    info_count: int
+    warning_count: int
+    error_count: int
+    critical_count: int
+    error_rate: float
+    top_errors: list[tuple[str, int]]
