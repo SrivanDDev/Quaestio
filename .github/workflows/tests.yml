@@ -1,0 +1,30 @@
+name: Tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[dev]'
+      - run: python -m pytest -q
+      - run: python -m pip wheel . --no-deps --wheel-dir dist
+      - run: python -m pip install --force-reinstall --no-deps dist/*.whl
+      - name: Installed command smoke test outside checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          quaestio --help
+          quaestio analyze "$GITHUB_WORKSPACE/examples/sample.log" --output json
+          python -m quaestio analyze "$GITHUB_WORKSPACE/examples/sample.ndjson" --format ndjson
+          quaestio analyze "$GITHUB_WORKSPACE/examples/bracketed.log" --format auto
+          quaestio analyze "$GITHUB_WORKSPACE/examples/custom-pipe.log" --parser-config "$GITHUB_WORKSPACE/examples/layouts/custom-pipe.json" --output json

@@ -1,0 +1,24 @@
+{
+  "format": "ndjson",
+  "fields": {
+    "timestamp": [
+      "event",
+      "at"
+    ],
+    "level": [
+      "event",
+      "severity"
+    ],
+    "source": [
+      "context",
+      "service"
+    ],
+    "message": "msg"
+  },
+  "timestamp_format": "unix_ms",
+  "level_map": {
+    "20": "INFO",
+    "40": "ERROR",
+    "50": "CRITICAL"
+  }
+}

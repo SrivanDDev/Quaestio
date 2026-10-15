@@ -1,0 +1,4 @@
+INFO | server | 07/10/2026 10:30:00 | Server started
+WARN | server | 07/10/2026 10:30:02 | High memory usage
+severe | database | 07/10/2026 10:30:05 | Connection refused
+ERROR | database | 07/10/2026 10:30:10 | Connection refused

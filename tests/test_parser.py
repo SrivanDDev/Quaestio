@@ -27,8 +27,8 @@ def test_parse_invalid_level():
     with pytest.raises(LogParseError):
         parse_line(line)
 
-def test_parse_file():
-    entries = list(parse_file("examples/sample.log"))
+def test_parse_file(sample_log):
+    entries = list(parse_file(sample_log))
 
     assert len(entries) == 4
     assert entries[0].level == LogLevel.INFO

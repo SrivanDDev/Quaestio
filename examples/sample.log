@@ -1,0 +1,4 @@
+2026-08-27 21:30:15 INFO server Server started
+2026-08-27 21:31:02 WARNING server High memory usage
+2026-08-27 21:32:45 ERROR database Connection refused
+2026-08-27 21:33:10 INFO server Request completed

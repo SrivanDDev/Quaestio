@@ -1,0 +1,4 @@
+{"timestamp":"2026-08-27T21:30:15","level":"INFO","source":"server","message":"Server started"}
+{"timestamp":"2026-08-27T21:31:02","level":"WARNING","source":"server","message":"High memory usage"}
+{"timestamp":"2026-08-27T21:32:45","level":"ERROR","source":"database","message":"Connection refused"}
+{"timestamp":"2026-08-27T21:33:10","level":"INFO","source":"server","message":"Request completed"}

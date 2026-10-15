@@ -1,0 +1,3 @@
+{"event":{"at":1791369000000,"severity":20},"context":{"service":"server"},"msg":"Server started"}
+{"event":{"at":1791369005000,"severity":40},"context":{"service":"database"},"msg":"Connection refused"}
+{"event":{"at":1791369010000,"severity":40},"context":{"service":"database"},"msg":"Connection refused"}

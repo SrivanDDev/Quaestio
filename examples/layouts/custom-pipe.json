@@ -1,0 +1,8 @@
+{
+  "format": "regex",
+  "pattern": "(?P<level>[^|]+?)\\s*\\|\\s*(?P<source>[^|]+?)\\s*\\|\\s*(?P<timestamp>[^|]+?)\\s*\\|\\s*(?P<message>.+)",
+  "timestamp_format": "%d/%m/%Y %H:%M:%S",
+  "level_map": {
+    "severe": "ERROR"
+  }
+}
